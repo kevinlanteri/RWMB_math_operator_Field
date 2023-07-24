@@ -1,0 +1,53 @@
+:root{
+    --etrck-form-background: #fff;
+    --etrck-form-text: #000;
+    --etrck-primary: #007bff;
+    --etrck-secondary: #fff;
+    --etrck-font-fontawesome: "Font Awesome 5 Free";
+}
+
+.rwmb-form .rwmb-math_operator-wrapper{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rwmb-form .rwmb-math_operator-wrapper input[type="text"]{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    color: var(--etrck-form-text);
+    background-color: var(--etrck-form-background);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    transition:all 0.3s ease;
+    caret-shape: block;
+    /*appearence*/
+    -moz-appearance: none;
+}
+
+.rwmb-form .rwmb-math_operator-wrapper input[type="text"]:focus,
+.rwmb-form .rwmb-math_operator-wrapper input[type="text"]:hover{
+    background: var(--etrck-primary);
+    color: var(--etrck-secondary);
+}
+
+/*add fontawesome number */
+.rwmb-form .rwmb-math_operator-wrapper .rwmb-input{
+    position:relative;
+}
+
+.rwmb-form .rwmb-math_operator-wrapper .rwmb-input::before{
+    content: "\f1ec";
+    font-family: var(--etrck-font-fontawesome);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: var(--etrck-form-text);
+    font-size:.9em;
+    transition:all 0.3s ease;
+}
