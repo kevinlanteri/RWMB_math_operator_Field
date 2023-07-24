@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Math operator field that sum multiple designated fields (by id)
+ * Math operator field
  *
  */
 class RWMB_math_operator_Field extends RWMB_Field{
