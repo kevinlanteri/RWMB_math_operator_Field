@@ -22,20 +22,21 @@ class RWMB_math_operator_Field extends RWMB_Field{
 
     public static function add_actions()
     {
-        $https = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://";
-        $url_path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__);
-        $file_url = $https.$_SERVER['HTTP_HOST'].$url_path;
-        wp_enqueue_script('math_operator_js', $file_url.'/js/rwmb_operation.js', ['jquery'], uniqid() );
-        wp_enqueue_style('math_operator_css', $file_url.'/css/rwmb_operation.css', ['rwmb'], uniqid() );
+        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery'], uniqid() );
+        wp_enqueue_style('math_operator_css', RWMB_math_operator_Field::get_file_url().'/css/rwmb_operation.css', ['rwmb'], uniqid() );
 
     }
 
     public static function admin_enqueue_scripts()
     {
+        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery'], uniqid() );
+    }
+
+    public static function get_file_url(){
         $https = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://";
         $url_path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__);
         $file_url = $https.$_SERVER['HTTP_HOST'].$url_path;
-        wp_enqueue_script('math_operator_js', $file_url . '/js/rwmb_operation.js', ['jquery'], uniqid() );
+        return $file_url;
     }
 
 }
