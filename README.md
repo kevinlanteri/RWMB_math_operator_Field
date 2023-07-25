@@ -9,7 +9,7 @@ RWMB_math_operator_Field is a custom field type that allows you to perform mathe
 To use the RWMB_math_operator_Field, follow the steps below:
 
 1. Ensure you have the Meta Box Builder (MBB) plugin installed and activated.
-2. Include the PHP code provided for the RWMB_math_operator_Field class into your theme's `functions.php` file.
+2. Include RWMB_math_operator_Field.php class into your theme's `functions.php` file.
 
 ## How to Create a Math Operation Field
 
