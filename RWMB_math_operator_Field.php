@@ -22,14 +22,14 @@ class RWMB_math_operator_Field extends RWMB_Field{
 
     public static function add_actions()
     {
-        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery'], uniqid() );
+        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery', 'rwmb'], uniqid() );
         wp_enqueue_style('math_operator_css', RWMB_math_operator_Field::get_file_url().'/css/rwmb_operation.css', ['rwmb'], uniqid() );
 
     }
 
     public static function admin_enqueue_scripts()
     {
-        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery'], uniqid() );
+        wp_enqueue_script('math_operator_js', RWMB_math_operator_Field::get_file_url().'/js/rwmb_operation.js', ['jquery', 'rwmb'], uniqid() );
     }
 
     public static function get_file_url(){
