@@ -1,8 +1,14 @@
 ( function ( $, rwmb ) {
-
+    'use strict';
 
     $('.rwmb_math_operator_json').each(function(){
         etrck_math_operator($(this));
+    });
+
+    $('.rwmb-clone .rwmb_math_operator_json').each(function( index ){
+        var cloneId = $(this).parent().find('input').attr('name');
+        var groupId = cloneId.split('[')[0];
+        etrck_group_math_operator($(this), cloneId, groupId, index);
     });
 
     rwmb.$document.on('clone', function(events, index){
