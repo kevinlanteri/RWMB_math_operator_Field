@@ -70,7 +70,7 @@ function etrck_math_operator(object){
             //radio
             if(jQuery('[name*="'+id+'"]').attr('type') === 'radio'){
                 if(jQuery('[name*="'+id+'"]').is(':checked')){
-                    val = +jQuery('[name*="'+id+'"]').val();
+                    val = +parseInt(jQuery('[name*="'+id+'"]:checked').val());
                 }else{
                     val = 0;
                 }
@@ -78,7 +78,7 @@ function etrck_math_operator(object){
             //checkbox
             if(jQuery('[name*="'+id+'"]').attr('type') === 'checkbox'){
                 if(jQuery('[name*="'+id+'"]').is(':checked')){
-                    val = +jQuery('[name*="'+id+'"]').val();
+                    val = +parseInt(jQuery('[name*="'+id+'"]:checked').val());
                 }else{
                     val = 0;
                 }
@@ -88,13 +88,14 @@ function etrck_math_operator(object){
                 if(jQuery('[name*="'+id+'"]').val() === ''){
                     val = 0;
                 }else{
-                    val = +jQuery('[name*="'+id+'"]').val();
+                    val = +parseInt(jQuery('[name*="'+id+'"]:selected').val());
                 }
             }
             //if it's empty, set it to 0
             if(val === ''){
                 val = 0;
             }
+            console.log(val);
             values.push(val);
         });
 
